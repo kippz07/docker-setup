@@ -4,17 +4,17 @@
 
 `docker run hello-world` Test environment is set up
 
-`Dockerfile` defines what will happen in the environment inside the container
+`Dockerfile` Defines what will happen in the environment inside the container
 
 `requirements.txt` Contains required packages
 
-`docker build -t imagename .` Create the Docker image
+`docker build -t [imagename] .` Create the Docker image
 
 `docker image ls` Lists all the Docker images
 
-`docker run -p 4000:80 imagename` Runs the app, mapping port 4000 to containers port 80
+`docker run -p 4000:80 [imagename]` Runs the app, mapping port 4000 to containers port 80
 
-`docker run -d -p 4000:80 imagename` Runs app in detached mode
+`docker run -d -p 4000:80 [imagename]` Runs app in detached mode
 
 `docker container ls` Lists container IDs
 
@@ -24,7 +24,7 @@
 
 `docker login` Login to Docker cloud
 
-`docker tag [image] [username]/[repository]:[tag]` Associate a local image with a repository on the cloud
+`docker tag [imagename] [username]/[repository]:[tag]` Associate a local image with a repository on the cloud
 
 `docker push [username]/[repository]:[tag]` Upload tagged image to repository
 

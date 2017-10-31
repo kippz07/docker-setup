@@ -1,7 +1,7 @@
 version: "3" # version 3 makes it swarm mode compatible
 services:
   web:
-    image: jennyejohnson/setup-code:starter
+    image: jennyejohnson/setup-code:v2
     deploy:
       replicas: 5 # number of instances you want to run
       resources:
