@@ -30,6 +30,20 @@
 
 `docker run -p 4000:80 [username]/[repository]:[tag]` Run Docker image from the cloud
 
-# Docker services
+### Docker services
 
 `docker-compose.yml` Defines how Docker containers should behave in production
+
+`docker swarm init`
+
+`docker stack deploy -c docker-compose.yml [appname]` Deploy the app with a name
+
+`docker service ls` Lists the services
+
+`docker service ps [serviceid]` Lists all the containers in that service
+
+`docker inspect --format='{{.Status.ContainerStatus.ContainerID}}' [taskid]` Returns the ID of its container
+
+`docker inspect --format="{{index .Config.Labels \"com.docker.swarm.task.id\"}}" [containerid]` Returns the ID of its task
+
+`docker container ls -q` Lists all the container IDs
