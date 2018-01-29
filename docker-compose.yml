@@ -1,12 +1,12 @@
 version: "3" # version 3 makes it swarm mode compatible
 services:
   web:
-    image: jennyejohnson/setup-code:v2
+    image: jennyejohnson/setup-code:v2 # Pull the image
     deploy:
       replicas: 5 # number of instances you want to run
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.1" # Use 10% of CPU across all cores
           memory: 50M
       restart_policy:
         condition: on-failure # immediately restart containers on failure
